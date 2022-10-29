@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MR PHONE</title>
+    <link rel="stylesheet" href="../Página Principal/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <a class="navbar-brand d-none d-lg-block" href="../Página Principal/index.html">
+              <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1458494867/u4v2ucsgyf6i7rew97in.png" alt="Mr.Robot" width="40" height="34">
+          </a>
+          <div class="twelve d-none d-lg-block">
+              <h1>MR PHONE</h1>
+          </div>
+
+          <!--Aqui empieza la parte del OFFCANVA-->
+          <a class="btn btn-light d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+          </a>
+          <!--Aqui termina la parte del OFFCANVA-->
+          
+          <div class="search-box d-none d-sm-block">
+              <input class="search-input" type="text" placeholder="Buscar">
+              <a href="../Página Principal/index.html" class="search-btn">
+                <i class="fas fa-search"></i>
+              </a>
+          </div>
+          <div class="search-box d-sm-none" id="search">
+              <input class="search-input" type="text" placeholder="Buscar">
+              <i class="bi bi-search"></i>
+          </div>
+
+
+
+
+          <div class="collapse navbar-collapse justify-content-end d-none d-lg-block" id="Botones">
+              <a href="../Página Principal/index.html"><button class="corners">
+                  INICIO
+              </button></a>
+              <!--Este es el icon del carrito-->
+              <button class="corners">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                    </svg>
+              </button>
+              <a href="../Pagina Nuevo Anuncio/nuevoAnuncio.html">
+                <button class="corners">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                      </svg>
+                </button>
+              </a>
+          </div>
+      </div>
+    </nav>
+
+    <!--Aqui inicia la parte del contenido del OFFCANVA-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+          <div class="twelve">
+            <h1>MR.PHONE</h1>
+          </div>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="wrapper">
+          <ul>
+              <li><a href="../Página Principal/index.html">INICIO</a></li>
+              <li><a href="../Pagina Nuevo Anuncio/nuevoAnuncio.html">NUEVO</a></li>
+              <li><a href="#">CARRITO</a></li>
+          </ul>
+      </div>
+      </div>
+  </div>
+    <!--Aqui termina la parte del contenido del OFFCANVA-->
+
+      <!--
+        Aqui empieza el cuerpo de la página
+      -->
+
+      <div class="row">
+
+        <!--ESTE DIV SE ENCARGA DE TENER TODOS LOS CHECKBOX-->
+
+        <div class="col-2 filtro_izq d-none d-lg-block">
+          <div class="form-check form-switch mb-4 ms-4">
+            <input class="form-check-input fs-4" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <label class="form-check-label fs-4" for="flexSwitchCheckChecked">Nuevo</label>
+          </div>
+  
+          <p class="fs-4 mb-0 ms-4 p-border">Marcas</p>
+          <div class="d-inline-flex flex-column p-2 ms-4 me-4 mb-4 p-2">
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Samsung
+              </label>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal"/>
+                Huawei
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Nokia
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Iphone
+              </label>
+            </div>
+  
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Xiaomi
+              </label>
+            </div>
+          </div>
+  
+          <p class="fs-4 mb-0 ms-4 p-border">Sistemas</p>
+          <div class="d-inline-flex flex-column p-2 ms-4 me-4 mb-4 p-2">
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Android
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                IOS
+              </label>
+            </div>
+  
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Windows
+              </label>
+            </div>
+          </div>
+  
+          <p class="fs-4 mb-0 ms-4 p-border">Pantalla</p>
+          <div class="d-inline-flex flex-column p-2 ms-4 me-4 mb-4 p-2">
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                6.0
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                5.5
+              </label>
+            </div>
+  
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                5
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="row">
+            <div class="col d-none d-lg-block">
+
+              <div class="mb-3 mt-3 row">
+                <label for="text-input" class="col-lg-2 col-form-label">Precio:</label>
+                <div class="col-sm-4">
+                  <input class="input-texto col-10" id="text-input" type="text" value="$" />
+                </div>
+                <label for="text-input" class="col-lg-2 col-form-label">Hasta:</label>
+                <div class="col-sm-4">
+                  <input class="input-texto col-10" id="text-input" type="text" value="$" />
+                </div>
+              </div>
+
+            </div>
+            <div class="col d-none d-lg-block">
+
+              <div class="mb-3 mt-3 row">
+                <label for="ordenar" class="col-sm-1 col-form-label">Ordenar:</label>
+                <div class="col-sm-4 col-8 ms-5">
+                  <select name="menu" class="col-lg-10" id="ordenar">
+                    <option disabled selected>↑ Precio</option>
+                    <option value="html">Alto - Bajo</option>
+                    <option value="css">Bajo - Alto</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <select name="menu" class="col-lg-10" id="ordenar">
+                    <option disabled selected>Fecha</option>
+                    <option value="html">Más Reciente</option>
+                    <option value="css">Más Antiguo</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!--ESTA PARTE SOLO APARECE EN PANTALLAS LG O MENOR-->
+
+            <div class="col d-lg-none" style="margin: auto;width: 50%;">
+              <div class="mb-3 mt-3 row">
+                <label for="ordenar" class="col-sm-1 col-2 col-form-label me-2">Ordenar:</label>
+                <div class="col-sm-3 col-4 xs-2 ms-2 mt-1">
+                  <select name="menu" id="ordenar" class="col-md-7 col-sm-9 col-12">
+                    <option disabled selected>↑ Precio</option>
+                    <option value="html">Alto - Bajo</option>
+                    <option value="css">Bajo - Alto</option>
+                    <option value="3">Más reciente</option>
+                    <option value="4">Más antiguo</option>
+                  </select>
+                  <!--<select id="ordenar" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>↑ Precio</option>
+                    <option value="1">Alto - Bajo</option>
+                    <option value="2">Bajo - Alto</option>
+                    <option value="3">Más reciente</option>
+                    <option value="4">Más antiguo</option>
+                  </select>-->
+                </div>
+                  <div class="col-sm-4 col-4">
+                    <a class="btn btn-light d-lg-none" data-bs-toggle="offcanvas" href="#offcanva_filtro" role="button" aria-controls="offcanva_filtro">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                        <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+                      </svg>
+                    </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="offcanva_filtro" aria-labelledby="staticBackdropLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1458494867/u4v2ucsgyf6i7rew97in.png" alt="Mr.Robot" width="40" height="34">Mr.Phone</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="form-check form-switch mb-4 ms-4">
+                  <input class="form-check-input fs-4" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label fs-4" for="flexSwitchCheckChecked">Nuevo</label>
+                </div>
+                <p class="fs-4 mb-0 ms-4 p-border">Marcas</p>
+          <div class="d-inline-flex flex-column p-2 ms-4 me-4 mb-4 p-2">
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Samsung
+              </label>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal"/>
+                Huawei
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Nokia
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Iphone
+              </label>
+            </div>
+  
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Xiaomi
+              </label>
+            </div>
+          </div>
+          <p class="fs-4 mb-0 ms-4 p-border">Sistemas</p>
+          <div class="d-inline-flex flex-column p-2 ms-4 me-4 mb-4 p-2">
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Android
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                IOS
+              </label>
+            </div>
+  
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                Windows
+              </label>
+            </div>
+          </div>
+
+          <p class="fs-4 mb-0 ms-4 p-border">Pantalla</p>
+          <div class="d-inline-flex flex-column p-2 ms-4 me-4 mb-4 p-2">
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                6.0
+              </label>
+            </div>
+          
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                5.5
+              </label>
+            </div>
+  
+            <div class="mb-2">
+              <label class="form-control-checkbox">
+                <input type="checkbox" name="checkbox-filter" class="checkbox-normal" />
+                5
+              </label>
+            </div>
+          </div>
+              </div>
+          </div>
+
+
+          </div>
+
+          <!--AQUI EMPIEZAN LAS CARTAS-->
+
+          <section>
+            <div class="container py-5">
+              <div class="row">
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img">
+                      <a href="../Descripcion/iPhone 14 pro.html"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6487/6487386_sd.jpg" alt="Product" class="img-responsive" /></a>
+                    </div>
+                    <div class="wsk-cp-text">
+                      <div class="title-product">
+                        <h3>Iphone 14 Pro</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Pantalla: 6.1", 1179 x 2556 pixel<br>Procesador: Apple A16 Bionic<br>RAM: 6GB,Almacenamiento: 128GB/256GB/512GB/1TB</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">$999</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><a href="../Descripcion/Samsung Galaxy S22.html"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494445_sd.jpg" alt="Product" class="img-responsive" /></div></a>
+                    <div class="wsk-cp-text">
+                      <div class="title-product">
+                        <h3>Samsung Galaxy S22</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Pantalla: 6.1", 1080 x 2340 pixels<br>Procesador: Snapdragon 8 Gen 1 3GHz / Exynos 2200 2.8GHz<br>RAM: 8GB<br>Almacenamiento: 128GB/256GB</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">$1099</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><a href="../Descripcion/Google Pixel 6.html"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6483/6483635_sd.jpg" alt="Product" class="img-responsive" /></div></a>
+                    <div class="wsk-cp-text">
+                      <div class="title-product">
+                        <h3>Google Pixel 6</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Pantalla: 6.4", 1080 x 2400 pixels<br>Procesador: Google Tensor<br>RAM: 8GB<br>Almacenamiento: 128GB/256GB</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">$1299</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><a href="../Descripcion/One Plus 10 pro.html"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6500/6500266_bd.jpg" alt="Product" class="img-responsive" /></div></a>
+                    <div class="wsk-cp-text">
+                      <div class="title-product">
+                        <h3>OnePlus 10 Pro</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Pantalla: 6.7", 1440 x 3216 pixels<br>Procesador: Snapdragon 8 Gen 1 3GHz<br>RAM: 8GB/12GB<br>Almacenamiento: 128GB/256GB</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">$1099</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><a href="../Descripcion/Nokia XR 20.html"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6486/6486841_sd.jpg" alt="Product" class="img-responsive" /></div></a>
+                    <div class="wsk-cp-text">
+                      <div class="title-product">
+                        <h3>Nokia XR20</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Pantalla: 6.67", 1080 x 2400 pixels<br>Procesador: Snapdragon 480 5G 2.0GHz<br>RAM: 6GB<br>Almacenamiento: 128GB Expansión: microSD</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">$1099</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><a href="../Descripcion/Xiaomi 11T Pro.html"><img src="https://m.media-amazon.com/images/I/51ySxiRTuhL._AC_SL1000_.jpg" alt="Product" class="img-responsive" /></div></a>
+                    <div class="wsk-cp-text">
+                      <div class="title-product">
+                        <h3>Xiaomi 11T Pro</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Pantalla: 6.67", 1080 x 2400 pixels<br>Procesador: Snapdragon 888 2.84GHz<br>RAM: 8GB/12GB<br>Almacenamiento: 128GB/256GB</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">$1299</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <div class="mx-auto" style="width: 200px;">
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item active"><a class="page-link" href="../Trabajo Ebay Shop/index.html">1</a></li>
+                <li class="page-item" aria-current="page">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+              </ul>
+            </nav>
+          </div>
+          
+
+        </div>
+      </div>
+      <footer>
+        <div class="box_footer">
+          <hr>Osorio Morán, Diego Rafael OM20022 : Peñate Hernández, Juan Felipe PH20006</hr>
+        </div>
+        
+      </footer>
+
+
+
+
+
+
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

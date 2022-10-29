@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NUEVO ANUNCIO</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+        <link rel="stylesheet" href="../Pagina Nuevo Anuncio/nuevoAnuncio.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand d-none d-lg-block" href="../Página Principal/index.html">
+                    <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1458494867/u4v2ucsgyf6i7rew97in.png" alt="Mr.Robot" width="40" height="34">
+                </a>
+                <div class="twelve d-none d-lg-block">
+                    <h1>MR.PHONE</h1>
+                </div>
+
+                <!--Aqui empieza la parte del OFFCANVA-->
+                <a class="btn btn-light d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </a>
+                <!--Aqui termina la parte del OFFCANVA-->
+                
+                <div class="search-box d-none d-sm-block">
+                    <input class="search-input" type="text" placeholder="Buscar">
+                    <a href="../Página Principal/index.html" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    </a>
+                </div>
+                <div class="search-box d-sm-none">
+                    <input class="search-input" type="text" placeholder="Buscar">
+                    <i class="bi bi-search"></i>
+                </div>
+
+
+
+
+                <div class="collapse navbar-collapse justify-content-end d-none d-lg-block" id="Botones">
+                    <a href="../Página Principal/index.html">
+                        <button class="corners">
+                            INICIO
+                        </button>
+                    </a>
+                    <!--Este es el icon del carrito-->
+                    <button class="corners">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                        </svg>
+                    </button>
+                    <a href="../Pagina Nuevo Anuncio/nuevoAnuncio.html">
+                        <button class="corners">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!--Aqui inicia la parte del contenido del OFFCANVA-->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1458494867/u4v2ucsgyf6i7rew97in.png" alt="Mr.Robot" width="40" height="34">Mr.Phone</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            <div class="wrapper">
+                <ul>
+                    <li><a href="../Página Principal/index.html">INICIO</a></li>
+                    <li><a href="../Pagina Nuevo Anuncio/nuevoAnuncio.html">NUEVO</a></li>
+                    <li><a href="#">CARRITO</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!--Aqui termina la parte del contenido del OFFCANVA-->
+
+
+        <!--AQUI EMPIEZA EL CUERPO DE LA PAGINA-->
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="h1-tittle d-none d-lg-block">Nuevo Anuncio</h1>
+                <h1 class="h1-tittle-hidding d-lg-none">Nuevo Anuncio</h1>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12 ms-5 p-0 mb-4">
+                <div class="colorshadow ms-0 d-none d-lg-block">
+                    <div class="row mb-4 mt-4">
+                        <div class="col-2 text-start">
+                            <span class="span-estado fs-5 fw-bold">Estado:</span>
+                        </div>
+                        <div class="col-10">
+                            <input type="radio" id="rdo1" checked class="radio-input" name="radio-group">
+                            <label for="rdo1" class="radio-label" > <span class="radio-border"></span> Nuevo </label>
+            
+                            <input type="radio" id="rdo2"  class="radio-input" name="radio-group">
+                            <label for="rdo2" class="radio-label" ><span class="radio-border"></span>Usado </label>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Marca:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="col-9 ms-2">
+                                <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: Apple"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Modelo:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="col-9 ms-2">
+                                <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: XS MAX"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Pantalla:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-6 pe-0 text-end">
+                                    <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej:5.6"/>
+                                </div>
+                                <div class="col-2 text-start ps-0">
+                                    <span class="">pulgadas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Sistema:</span>
+                        </div>
+                        <div class="col-9 ps-4">
+                            <select class="select-input col-7">
+                                <option val="">Elija una opción</option>
+                                <option val="1">IOS</option>
+                                <option val="2">Android</option>
+                                <option val="3">Windows</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Rom:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-4 pe-0 ms-1">
+                                    <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: 128"/>
+                                </div>
+                                <div class="col-3 text-start ps-0">
+                                    <span class="">Almacenamiento interno</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">RAM:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="col-5 ms-2">
+                                <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: 4"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-10 col-sm-10 col-10 colorshadow mt-lg-4 mt-md-4 contenedorOverflow">
+                    <div class="text-center me-4">
+                        <h1>Agrega fotos de tu producto</h1>
+                        <div style='padding:14px'>
+                            <label for="files">Selecciona multiples fotos: </label>
+                            <input id="files" type="file" multiple/>        
+                        </div>
+                        <div style='padding:14px; margin:auto';>
+                            <div id="sortableImgThumbnailPreview">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col margin-dimentions colorshadow mb-4 d-none d-lg-block">
+
+                <div class="row mb-4 mt-2">
+                    <div class="col-5 text-end">
+                        <span class="span-estado fs-5 fw-bold">Titulo breve del anuncio:</span>
+                    </div>
+                        <center>
+                            <div class="col">
+                                <input class="input-texto col-8" id="text-input" type="text" placeholder="Ej: Nuevo Iphone Xs Max de 8 pulgadas, 64 Gb Internos"/>
+                            </div>
+                        </center>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-3 text-end">
+                        <span class="span-estado fs-5 fw-bold">Precio:</span>
+                    </div>
+                    <div class="col-9 text-center">
+                        <div class="col-9 ms-2">
+                            <input class="input-texto col-10" id="text-input" type="text" value="$" placeholder="Ej: $250"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-3 text-end">
+                        <span class="span-estado fs-5 fw-bold">Vendedor:</span>
+                    </div>
+                    <div class="col-9 text-center">
+                        <div class="col-9 ms-2">
+                            <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: Benito Camelo"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-3 text-end">
+                        <span class="span-estado fs-5 fw-bold">Teléfono:</span>
+                    </div>
+                    <div class="col-9 text-center">
+                        <div class="col-9 ms-2">
+                            <input class="input-texto col-10" id="text-input" type="tel" placeholder="Ej: 7856-9522"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 text-end pe-3">
+                    <span class="span-estado fs-5 fw-bold">Descripción:</span>
+                </div>
+                <center>
+                    <div class="ms-5" id="pad">
+                        <textarea class="textarea" placeholder="Ej: Telefono en muy buenas condiciones, tiene 2 camaras..."></textarea>
+                    </div>
+                </center>
+                <center>
+                    <button class="fill" onclick="window.location='../Página Principal/index.html';">Cancelar</button>
+                    <button type="submit" class="arrowMove" onclick="myFunction()">
+                        <p class="arrowMoveFirstText">¿Enviamos?</p>
+                        <div class="icon arrow"></div>
+                        <p class="arrowMoveSecondText">¡Enviar!</p>
+                    </button>
+                    <div id="snackbar">Se ha agregado el nuevo anuncio</div>
+                </center>
+            </div>
+        </div>
+
+        <!-- ---------------------------------AQUI EMPIEZA LAS ETIQUETAS DEL HIDDING-------------------------------- -->
+
+        <div class="row mt-2 d-lg-none">
+            <center class="mb-3">
+                <span class="span-estado fs-5 fw-bold">Titulo breve del anuncio:</span>
+                <div class="col">
+                    <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: Nuevo Iphone Xs Max de 8 pulgadas, 64 Gb Internos"/>
+                </div>
+            </center>
+            <center>
+                <div class="row mb-4">
+                    <div class="col-5 text-end">
+                        <span class="span-estado fs-5 fw-bold">Precio:</span>
+                    </div>
+                    <div class="col-7 text-start">
+                        <div class="col-9 ms-2">
+                            <input class="input-texto col-5" id="text-input" type="text" value="$" placeholder="Ej: $250"/>
+                        </div>
+                    </div>
+                </div>
+            </center>
+            <div class="row mb-4">
+                <div class="col-6 text-end">
+                    <span class="span-estado fs-5 fw-bold">Vendedor:</span>
+                    <input class="input-texto col-md-8 col-sm-5 col-8" id="text-input" type="text" placeholder="Ej: Benito Camelo"/>
+                </div>
+                <div class="col-6">
+                    <span class="span-estado fs-5 fw-bold">Teléfono:</span>
+                    <input class="input-texto col-md-8 col-sm-5 col-8" id="text-input" type="tel" placeholder="Ej: 7856-9522"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-11 col-sm-10 col-11 colorshadow ms-md-5 ms-sm-5 ms-4 p-0 mb-4">
+                    <div class="row mb-4 mt-4">
+                        <div class="col-2 text-start">
+                            <span class="span-estado fw-bold">Estado:</span>
+                        </div>
+                        <div class="col-10">
+                            <input type="radio" id="rdo1" checked class="radio-input" name="radio-group">
+                            <label for="rdo1" class="radio-label" > <span class="radio-border"></span> Nuevo </label>
+            
+                            <input type="radio" id="rdo2"  class="radio-input" name="radio-group">
+                            <label for="rdo2" class="radio-label" ><span class="radio-border"></span>Usado </label>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Marca:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="col-9 ms-2">
+                                <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: Apple"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Modelo:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="col-9 ms-2">
+                                <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: XS MAX"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Pantalla:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-6 pe-0 text-end">
+                                    <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej:5.6"/>
+                                </div>
+                                <div class="col-2 text-start ps-0">
+                                    <span class="">pulgadas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Sistema:</span>
+                        </div>
+                        <div class="col-9 ps-4">
+                            <select class="select-input col-7">
+                                <option val="">Elija una opción</option>
+                                <option val="1">IOS</option>
+                                <option val="2">Android</option>
+                                <option val="3">Windows</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">Rom:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-4 pe-0 ms-1">
+                                    <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: 128"/>
+                                </div>
+                                <div class="col-3 text-start ps-0">
+                                    <span class="">Almacenamiento interno</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 text-center">
+                            <span class="span-estado fs-5 fw-bold">RAM:</span>
+                        </div>
+                        <div class="col-9">
+                            <div class="col-5 ms-2">
+                                <input class="input-texto col-10" id="text-input" type="text" placeholder="Ej: 4"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <span class="span-estado fs-5 fw-bold">Descripción:</span>
+                <center>
+                    <div class="ms-md-0 ms-sm-0 ms-3" id="pad">
+                        <textarea class="textarea" placeholder="Ej: Telefono en muy buenas condiciones, tiene 2 camaras..."></textarea>
+                    </div>
+                </center>
+                <center>
+                    <button class="fill" onclick="window.location='../Página Principal/index.html';">Cancelar</button>
+                    <button class="arrowMove" onclick="myFunction2()">
+                        <p class="arrowMoveFirstText">¿Enviamos?</p>
+                        <div class="icon arrow"></div>
+                        <p class="arrowMoveSecondText">¡Enviar!</p>
+                    </button>
+                    <div id="snackbar2">Se ha agregado el nuevo anuncio</div>
+                </center>
+            </div>
+        </div>
+        
+
+        <script>
+            function myFunction() {
+                // Get the snackbar DIV
+                var x = document.getElementById("snackbar");
+              
+                // Add the "show" class to DIV
+                x.className = "show";
+                
+              
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ x.className = x.className.replace("show", ""); window.location='../Página Principal/index.html'; }, 3000);
+            }
+            function myFunction2() {
+                // Get the snackbar DIV
+                var x2 = document.getElementById("snackbar2");
+              
+                // Add the "show" class to DIV
+                x2.className = "show";
+                
+              
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ x2.className = x2.className.replace("show", ""); window.location='../Página Principal/index.html'; }, 3000);
+            }
+        </script>
+
+        <script>
+            $(function() {
+                $("#sortableImgThumbnailPreview").sortable({
+                 connectWith: ".RearangeBox",
+                
+                    
+                  start: function( event, ui ) { 
+                       $(ui.item).addClass("dragElemThumbnail");
+                       ui.placeholder.height(ui.item.height());
+               
+                   },
+                    stop:function( event, ui ) { 
+                       $(ui.item).removeClass("dragElemThumbnail");
+                   }
+                });
+                $("#sortableImgThumbnailPreview").disableSelection();
+            });
+    
+            document.getElementById('files').addEventListener('change', handleFileSelect, false);
+            
+            function handleFileSelect(evt) {
+                
+                var files = evt.target.files; 
+                var output = document.getElementById("sortableImgThumbnailPreview");
+                
+                // Loop through the FileList and render image files as thumbnails.
+                for (var i = 0, f; f = files[i]; i++) {
+            
+                // Only process image files.
+                if (!f.type.match('image.*')) {
+                    continue;
+                }
+            
+                var reader = new FileReader();
+            
+                // Closure to capture the file information.
+                reader.onload = (function(theFile) {
+                    return function(e) {
+                    // Render thumbnail.
+                    var imgThumbnailElem = "<div class='RearangeBox imgThumbContainer'><i class='material-icons imgRemoveBtn' onclick='removeThumbnailIMG(this)'>cancel</i><div class='IMGthumbnail' ><img  src='" + e.target.result + "'" + "title='"+ theFile.name + "'/></div><div class='imgName'>"+ theFile.name +"</div></div>";
+                                
+                                output.innerHTML = output.innerHTML + imgThumbnailElem; 
+                    
+                    };
+                })(f);
+            
+                // Read in the image file as a data URL.
+                reader.readAsDataURL(f);
+                }
+            }
+            
+            function removeThumbnailIMG(elm){
+                elm.parentNode.outerHTML='';
+            }
+        </script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>

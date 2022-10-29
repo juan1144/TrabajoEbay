@@ -1,0 +1,710 @@
+.navbar {
+    border-bottom: solid;
+    border-color: #984447;
+}
+
+/*CSS PARA EL INPUT SEARCH*/
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #984447;
+    height: 50px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.search-btn {
+    color: black;
+    float: right;
+    width: 50px;
+    height: 35px;
+    border-radius: 50%;
+    background: #984447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+}
+
+.fa-search {
+    background: #984447;
+    font-size: 24px;
+}
+
+.search-input {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #2A1314;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 50px;
+    width: 0;
+}
+
+.search-box:hover>.search-input {
+    width: 150px;
+    padding: 0 7px;
+}
+
+
+/*CSS PARA EL TEXT TITLE*/
+
+.twelve h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: black;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 160px;
+    text-align: center;
+    margin: auto;
+    white-space: nowrap;
+    padding-bottom: 13px;
+}
+
+.twelve h1:before {
+    background-color: #984447;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+
+.twelve h1:after {
+    background-color: #984447;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+/*CSS PARA EL BUTTON*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+button {
+    width: 100px;
+    height: 40px;
+    transition: 0.25s;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+}
+
+.corners {
+    color: black;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.corners::before,
+.corners::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: none;
+    width: 0;
+    height: 0;
+    border-top: 0px solid #984447;
+    border-left: 0px solid #984447;
+    transition: 0.4s width, 0.4s height;
+    border-radius: 5px;
+}
+
+.corners::before {
+    top: -1px;
+    left: -1px;
+}
+
+.corners::after {
+    bottom: -1px;
+    right: -1px;
+}
+
+.corners:hover::before,
+.corners:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.corners:hover::before {
+    border-top: 2px solid #984447;
+    border-left: 2px solid #984447;
+}
+
+.corners:hover::after {
+    border-bottom: 2px solid #984447;
+    border-right: 2px solid #984447;
+}
+
+
+/*ESTE ES EL CSS PARA EL OFFCANVA*/
+
+.wrapper {
+    top: 0;
+    /*left: -100%;*/
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+    transition: all 0.6s ease-in-out;
+}
+
+.wrapper ul {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.wrapper ul li {
+    height: 10%;
+    margin: 15px 0;
+}
+
+.wrapper ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+    line-height: 50px;
+    margin: 5px 30px;
+    transition: all 0.3s ease;
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.wrapper ul li a:hover {
+    color: #984447;
+}
+
+/*H1 CSS (NUEVO ANUNCIO)*/
+.h1-tittle {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: #984447;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.h1-tittle-hidding {
+    font-size: 45px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: #984447;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/*ESTE ES EL CSS PARA LOS RADIO OPTIONS*/
+.radio-input {
+    visibility: hidden;
+}
+
+.radio-label {
+    position: relative;
+    padding-left: 35px;
+}
+
+.radio-label:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+}
+
+.radio-border {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    outline: solid 3px #984447;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.radio-input:checked+.radio-label:after {
+    transition: all 0.5s;
+    background-color: #984447;
+}
+
+/*CSS PARA LOS INPUT TYPE TEXT*/
+:root {
+    --input-border: #984447;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+}
+
+.input-texto {
+    font-size: 16px;
+    font-size: Max(16px, 1em);
+    font-family: inherit;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+.input-texto:focus {
+    border-color: #984447;
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h),
+            var(--input-focus-s),
+            calc(var(--input-focus-l) + 40%),
+            0.8);
+    outline: 3px solid transparent;
+}
+
+label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/*ESTE ES EL CSS DEL SELECT*/
+.select-input {
+    background: #984447;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/*ESTE ES EL CSS PARA EL BORDE*/
+.colorshadow {
+    border: 2px solid #984447;
+    padding: 10px;
+    box-shadow: 6px 4px #984447;
+}
+
+.margin-dimentions {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/*ESTE ES EL CSS DEL TEXTAREA*/
+.textarea {
+    resize: none;
+    width: 300px;
+    height: 170px;
+    font-size: 17px;
+    padding: 20px;
+    font-family: system-ui;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+}
+
+.textarea::selection {
+    background: white;
+}
+
+.textarea::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #070707;
+}
+
+.textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #999999;
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+#pad {
+    background: #984447;
+    display: inline-block;
+    padding: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 10px;
+    color: white;
+}
+
+/*ESTE ES EL CSS DEL UPLOAD IMAGE INPUT*/
+.ui-sortable-placeholder {
+    border: 1px dashed black !important;
+    visibility: visible !important;
+    background: #eeeeee78 !important;
+}
+
+.ui-sortable-placeholder * {
+    visibility: hidden;
+}
+
+.RearangeBox.dragElemThumbnail {
+    opacity: 0.6;
+}
+
+.RearangeBox {
+    width: 180px;
+    height: 240px;
+    padding: 10px 5px;
+    cursor: all-scroll;
+    border: 1px solid #9E9E9E;
+    font-family: sans-serif;
+    display: inline-block;
+    margin: 5px !important;
+    text-align: center;
+    color: black;
+    background: #984447;
+}
+
+.IMGthumbnail {
+    max-width: 168px;
+    height: 220px;
+    margin: auto;
+    background-color: #ececec;
+    padding: 2px;
+    border: none;
+}
+
+.IMGthumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.imgThumbContainer {
+
+    margin: 4px;
+    border: solid;
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .2);
+}
+
+
+
+.imgThumbContainer>.imgName {
+    text-align: center;
+    padding: 2px 6px;
+    margin-top: 4px;
+    font-size: 13px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.imgThumbContainer>.imgRemoveBtn {
+    position: absolute;
+    color: #e91e63ba;
+    right: 2px;
+    top: 2px;
+    cursor: pointer;
+    display: none;
+}
+
+.RearangeBox:hover>.imgRemoveBtn {
+    display: block;
+}
+
+/*ESTE ES EL CSS DE LOS BOTONES*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+.arrowMove {
+    width: 150px;
+    height: 40px;
+    transition: 0.25s;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 16px;
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+.arrowMove {
+    display: inline-block;
+    transition: 0.2s;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    background: none;
+    content: "";
+    border: 0;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.arrowMove>p {
+    margin-block: 10px;
+    position: relative;
+    top: 0;
+}
+
+.arrowMove .arrowMoveSecondText {
+    display: none;
+}
+
+.icon.arrow {
+    position: absolute;
+    border: 2px solid #984447;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+.icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: 12px;
+    right: 14px;
+    width: 10px;
+    height: 10px;
+    border-top: 0.125rem solid #984447;
+    border-right: 0.125rem solid #984447;
+    transform: rotate(45deg);
+}
+
+.arrowMove:hover {
+    padding-left: 20px;
+}
+
+.arrowMove:hover .icon.arrow {
+    width: 150px;
+}
+
+.arrowMove:hover .arrowMoveFirstText {
+    display: none;
+}
+
+.arrowMove:hover .arrowMoveSecondText {
+    display: block;
+}
+
+.fill {
+    border: 2px solid #984447;
+    background: none;
+    color: black;
+}
+
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0px 0px 0 20px #984447;
+    color: white;
+}
+
+.contenedorOverflow {
+    overflow-y: scroll;
+    height: 238px;
+}
+
+/*ESTE ES EL CSS DEL SNACKBAR*/
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #984447;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+/*ESTE ES EL CSS PARA EL SEGUNDO SNACKBAR*/
+#snackbar2 {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #984447;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar2.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

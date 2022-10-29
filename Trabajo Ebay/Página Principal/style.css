@@ -1,0 +1,572 @@
+.navbar {
+    border-bottom: solid;
+    border-color: #984447;
+}
+
+.filtro_izq {
+    border-right: solid;
+    border-color: #984447;
+}
+
+.p-border {
+    border-bottom: solid #984447;
+}
+
+/*CSS PARA EL INPUT SEARCH*/
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #984447;
+    height: 50px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.search-btn {
+    color: black;
+    float: right;
+    width: 50px;
+    height: 35px;
+    border-radius: 50%;
+    background: #984447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+}
+
+.fa-search {
+    background: #984447;
+    font-size: 24px;
+}
+
+.search-input {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #2A1314;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 50px;
+    width: 0;
+}
+
+.search-box:hover>.search-input {
+    width: 150px;
+    padding: 0 7px;
+}
+
+#search:hover>.search-input {
+    width: 130px;
+    padding: 0 0px;
+}
+
+
+/*CSS PARA EL TEXT TITLE*/
+
+.twelve h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: black;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 160px;
+    text-align: center;
+    margin: auto;
+    white-space: nowrap;
+    padding-bottom: 13px;
+}
+
+.twelve h1:before {
+    background-color: #984447;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+
+.twelve h1:after {
+    background-color: #984447;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+/*CSS PARA EL BUTTON*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+button {
+    width: 100px;
+    height: 40px;
+    transition: 0.25s;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+}
+
+.corners {
+    color: black;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.corners::before,
+.corners::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: none;
+    width: 0;
+    height: 0;
+    border-top: 0px solid #984447;
+    border-left: 0px solid #984447;
+    transition: 0.4s width, 0.4s height;
+    border-radius: 5px;
+}
+
+.corners::before {
+    top: -1px;
+    left: -1px;
+}
+
+.corners::after {
+    bottom: -1px;
+    right: -1px;
+}
+
+.corners:hover::before,
+.corners:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.corners:hover::before {
+    border-top: 2px solid #984447;
+    border-left: 2px solid #984447;
+}
+
+.corners:hover::after {
+    border-bottom: 2px solid #984447;
+    border-right: 2px solid #984447;
+}
+
+
+/*ESTE ES EL CSS PARA EL OFFCANVA*/
+
+.wrapper {
+    top: 0;
+    /*left: -100%;*/
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+    transition: all 0.6s ease-in-out;
+}
+
+.wrapper ul {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.wrapper ul li {
+    height: 10%;
+    margin: 15px 0;
+}
+
+.wrapper ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+    line-height: 50px;
+    margin: 5px 30px;
+    transition: all 0.3s ease;
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.wrapper ul li a:hover {
+    color: #984447;
+}
+
+/*ESTE ES EL CSS PARA LOS CHECKBOX*/
+:root {
+    --form-control-color: #984447;
+    --form-control-disabled: #959495;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+form {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.form-control-checkbox {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+.form-control-checkbox+.form-control-checkbox {
+    margin-top: 1em;
+}
+
+.checkbox-normal {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #984447;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+}
+
+.checkbox-normal::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+.checkbox-normal:checked::before {
+    transform: scale(1);
+}
+
+.checkbox-normal:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+}
+
+.checkbox-normal:disabled {
+    --form-control-color: var(--form-control-disabled);
+
+    color: var(--form-control-disabled);
+    cursor: not-allowed;
+}
+
+/*Toggle Button*/
+
+:root {
+    --on: #984447;
+    --off: #555;
+    --scale: 11;
+    --toggle-width: calc(var(--scale) * 7.5px);
+    --toggle-height: calc(var(--scale) * 2.8125px);
+    --border-width: calc(var(--scale) * 0.5px);
+    --transition-time: 0.25s;
+}
+
+.switch {
+    position: relative;
+    display: block;
+    margin-inline: auto;
+    cursor: pointer;
+
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+
+    color: var(--off);
+    background-color: currentColor;
+
+    border: var(--border-width) solid currentcolor;
+    border-radius: var(--toggle-height);
+
+    transition: color var(--transition-time) ease-out;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+
+    /* 	Make it fit and make it round */
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+
+    /* 	Put it on the left */
+    left: 0;
+    transform: translateX(0);
+
+    /* 	Set the animation speed and easing */
+    transition: left var(--transition-time) ease-out,
+        transform var(--transition-time) ease-out;
+}
+
+input:checked+.switch {
+    color: var(--on);
+}
+
+input:checked+.switch::after {
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+/*ESTE ES EL CSS PARA EL INPUT*/
+
+:root {
+    --input-border: #984447;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+}
+
+.input-texto {
+    font-size: 16px;
+    font-size: Max(16px, 1em);
+    font-family: inherit;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+.input-texto:focus {
+    border-color: #984447;
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h),
+            var(--input-focus-s),
+            calc(var(--input-focus-l) + 40%),
+            0.8);
+    outline: 3px solid transparent;
+}
+
+label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/*ESTE ES EL CSS PARA EL DROPDOWN*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+select {
+    width: 180px;
+    outline: none;
+    border: 1px solid #8b8a8b;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 1px 4px #8b8a8b;
+    cursor: pointer;
+}
+
+select:focus,
+select:hover {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+/*ESTE ES EL CSS PARA EL PRODUCT-CARD*/
+
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+
+.wsk-cp-product {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    position: relative;
+    margin: 20px auto;
+}
+
+.wsk-cp-img {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -khtml-transform: translate(-50%);
+    width: 100%;
+    padding: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.wsk-cp-img img {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    border-radius: 6px;
+}
+
+.wsk-cp-product:hover .wsk-cp-img {
+    top: -40px;
+}
+
+.wsk-cp-product:hover .wsk-cp-img img {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.wsk-cp-text {
+    padding-top: 150%;
+}
+
+.wsk-cp-text .title-product {
+    text-align: center;
+}
+
+.wsk-cp-text .title-product h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.wsk-cp-text .description-prod p {
+    margin: 0;
+}
+
+/* Truncate */
+.wsk-cp-text .description-prod {
+    text-align: center;
+    width: 100%;
+    height: 62px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    padding: 25px 0 5px;
+    border-top: 1px solid #ddd;
+}
+
+.card-footer:after,
+.card-footer:before {
+    content: '';
+    display: table;
+}
+
+.card-footer:after {
+    clear: both;
+}
+
+.card-footer .wcf-left {
+    float: left;
+
+}
+
+.card-footer .wcf-right {
+    float: right;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*PAGINATION COLOR*/
+
+.pagination > li > a
+{
+    background-color: white;
+    color: black;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #984447 !Important;
+    border: solid 1px black !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #BE8A60 !Important;
+    border: solid 1px white;
+}
+
+.box_footer{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+
+}
+
+.box_footer a{
+    margin-top: 20px;
+    color: #984447;
+}
+
+.box_footer hr{
+    border: none;
+    height: 1px;
+    background-color: #984447;
+}
